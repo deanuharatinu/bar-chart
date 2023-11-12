@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/top_horizontal_line"
+        layout="@layout/item_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/mid_horizontal_line"
+        layout="@layout/item_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bar_layout" />
+
+    <include
+        android:id="@+id/bottom_horizontal_line"
+        layout="@layout/item_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--  List of Bar  -->
+    <LinearLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="50dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/top_horizontal_line">
+
+        <include
+            android:id="@+id/line1"
+            layout="@layout/item_bar_chart" />
+
+        <include
+            android:id="@+id/line2"
+            layout="@layout/item_bar_chart" />
+
+        <include
+            android:id="@+id/line3"
+            layout="@layout/item_bar_chart" />
+
+        <include
+            android:id="@+id/line4"
+            layout="@layout/item_bar_chart" />
+
+        <include
+            android:id="@+id/line5"
+            layout="@layout/item_bar_chart" />
+
+        <include
+            android:id="@+id/line6"
+            layout="@layout/item_bar_chart" />
+
+        <include
+            android:id="@+id/line7"
+            layout="@layout/item_bar_chart" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
