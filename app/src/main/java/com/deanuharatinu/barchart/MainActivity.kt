@@ -27,23 +27,24 @@ class MainActivity : AppCompatActivity() {
             BarChartModel("Min", 630_000f, 1_000_000f),
         )
 
-        binding.barChart.setValue(barChartModels) { index, view ->
-            val balloon = Balloon.Builder(this)
-                .setLayout(R.layout.item_baloon)
-                .setTextColorResource(R.color.black)
-                .setElevation(6)
-                .setTextSize(15f)
-                .setArrowPositionRules(ArrowPositionRules.ALIGN_ANCHOR)
-                .setArrowSize(10)
-                .setArrowPosition(0.5f)
-                .setCornerRadius(8f)
-                .setBackgroundColorResource(R.color.white)
-                .setBalloonAnimation(BalloonAnimation.ELASTIC)
-                .setLifecycleOwner(this)
-                .build()
+        val balloon = Balloon.Builder(this)
+            .setLayout(R.layout.item_baloon)
+            .setTextColorResource(R.color.black)
+            .setElevation(6)
+            .setTextSize(15f)
+            .setArrowPositionRules(ArrowPositionRules.ALIGN_ANCHOR)
+            .setArrowSize(10)
+            .setArrowPosition(0.5f)
+            .setCornerRadius(8f)
+            .setBackgroundColorResource(R.color.white)
+            .setBalloonAnimation(BalloonAnimation.FADE)
+            .setLifecycleOwner(this)
+            .build()
 
+        binding.barChart.setValue(barChartModels) { index, view ->
+            balloon.dismiss()
             // TODO: valuenya sekarang berapa?
-            view.showAlignTop(balloon, yOff = bin)
+            view.showAlignTop(balloon, )
         }
     }
 }

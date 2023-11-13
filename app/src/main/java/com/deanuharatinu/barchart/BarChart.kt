@@ -93,8 +93,7 @@ class BarChart : ConstraintLayout {
                     barChartModel.maxValue
                 )
 
-                itemBinding.bar
-                    .setOnClickListener { view ->
+                itemBinding.bar.setOnClickListener { view ->
                     onClick?.let { onClick(index, view) }
                 }
             }
